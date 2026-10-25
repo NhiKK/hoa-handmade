@@ -5,7 +5,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 // MẬT KHẨU QUẢN TRỊ: đổi ngay! Cách tốt nhất: ADMIN_PASSWORD=matkhaucuaban npm start
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
 
@@ -152,8 +152,7 @@ app.put('/api/categories', auth, (req, res) => {
   writeJson(CAT_FILE, list); res.json(list);
 });
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Website:   http://localhost:${PORT}`);
-  console.log(`Quản trị:  http://localhost:${PORT}/admin.html`);
-  if (ADMIN_PASSWORD === 'admin123') console.log('⚠ Đang dùng mật khẩu mặc định, hãy đặt ADMIN_PASSWORD!');
+  console.log(`Server is running on port ${PORT}`);
 });
