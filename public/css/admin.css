@@ -1,0 +1,48 @@
+/* Giao diện trang quản trị, dùng chung màu với style.css */
+.admin .wrap { display: grid; grid-template-columns: 380px 1fr; gap: 1.5rem; padding: 1.5rem 5%; align-items: start; }
+.panel { background: #fff; border-radius: var(--radius); padding: 1.5rem; box-shadow: 0 6px 20px rgba(122,46,74,.08); }
+.panel h1, .panel h2 { color: var(--plum); margin-bottom: 1rem; font-size: 1.4rem; }
+.login { max-width: 380px; margin: 12vh auto; }
+form { display: grid; gap: .8rem; }
+label { display: grid; gap: .25rem; font-weight: 600; font-size: .9rem; }
+input, select, textarea { font: inherit; padding: .55rem .8rem; border: 2px solid var(--pink); border-radius: 12px; background: var(--cream); }
+input[type=color] { padding: 2px; height: 42px; }
+input[type=file] { border-style: dashed; }
+.row { display: flex; gap: .8rem; align-items: end; flex-wrap: wrap; }
+.row > label { flex: 1; }
+.preview { height: 140px; border-radius: 14px; background-size: cover; background-position: center; display: grid; place-items: center; font-size: 3rem; }
+.msg { min-height: 1.2em; font-size: .9rem; color: var(--plum); }
+.msg.err { color: #b3261e; }
+.list { display: grid; gap: .7rem; }
+.item { display: grid; grid-template-columns: 64px 1fr auto; gap: .8rem; align-items: center; padding: .6rem; border-radius: 14px; background: var(--cream); }
+.item .t { width: 64px; height: 64px; border-radius: 12px; display: grid; place-items: center; font-size: 1.8rem; background-size: cover; background-position: center; }
+.item strong { display: block; }
+.item small { color: #6b565e; }
+.item .btns { display: flex; gap: .4rem; }
+.item .btn { padding: .4rem .9rem; font-size: .85rem; }
+.btn-del { background: #b3261e; }
+@media (max-width: 900px) { .admin .wrap { grid-template-columns: 1fr; } }
+
+/* Tab và form nội dung trang chủ */
+.admin [hidden] { display: none !important; }
+.tabs { display: flex; gap: .5rem; padding: 1rem 5% 0; }
+.tab { font: inherit; font-weight: 700; border: 2px solid var(--pink); background: #fff; padding: .5rem 1.2rem; border-radius: 99px; cursor: pointer; }
+.tab.active { background: var(--pink); }
+.admin .wrap.one { grid-template-columns: minmax(0, 680px); }
+.hint { font-weight: 400; color: #6b565e; font-size: .8rem; }
+
+/* Khối trang chủ & danh mục */
+.hint { display: block; margin-bottom: .6rem; }
+.blocks { display: grid; gap: .6rem; margin-bottom: 1rem; }
+.block { background: var(--cream); border-radius: 14px; border: 2px solid var(--pink); }
+.block.off { opacity: .6; border-style: dashed; }
+.block summary { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: .7rem 1rem; cursor: pointer; list-style: none; flex-wrap: wrap; }
+.block summary::-webkit-details-marker { display: none; }
+.bname small { color: #6b565e; margin-left: .4rem; }
+.btns button { font: inherit; font-size: .85rem; font-weight: 600; border: 0; border-radius: 99px; padding: .25rem .8rem; background: var(--mint); cursor: pointer; }
+.btns button.danger { background: #f6d0cc; color: #8a1c14; }
+.block .fields { display: grid; gap: .8rem; padding: 0 1rem 1rem; }
+.chk { display: flex; align-items: center; gap: .5rem; }
+.chk input { width: 18px; height: 18px; }
+.addbar { margin: 1rem 0; align-items: end; }
+.item.cat { grid-template-columns: 1fr auto; }

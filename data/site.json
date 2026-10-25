@@ -1,0 +1,23 @@
+{
+  "settings": {
+    "shopName": "Nụ Xinh",
+    "logoEmoji": "🌸",
+    "address": "123 Đường Hoa, Quận 1, TP. Hồ Chí Minh",
+    "phone": "0900 000 000",
+    "zalo": "0900000000",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "copyright": "© 2026 Nụ Xinh. Bảo lưu mọi quyền."
+  },
+  "blocks": [
+    { "id": "hero", "type": "hero", "visible": true, "menuLabel": "Trang chủ",
+      "title": "Tươi thắm tình yêu thủ công trong từng bông hoa",
+      "text": "Hoa len, hoa giấy làm tay từng cánh. Không héo, giữ mãi kỷ niệm.",
+      "buttonText": "Xem bộ sưu tập", "buttonLink": "#bo-suu-tap" },
+    { "id": "bo-suu-tap", "type": "products", "visible": true, "menuLabel": "Bộ sưu tập",
+      "title": "Bộ sưu tập", "category": "", "showFilter": true, "showSearch": true },
+    { "id": "ve-chung-toi", "type": "text", "visible": true, "menuLabel": "Về chúng tôi",
+      "title": "Về chúng tôi",
+      "body": "Nụ Xinh là xưởng hoa handmade nhỏ. Mỗi bó hoa được làm tay từ len và giấy, nhận đặt theo màu và ý bạn muốn." }
+  ]
+}
